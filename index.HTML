@@ -10,6 +10,8 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather App</title>
   </head>
@@ -44,7 +46,7 @@
                   <span id="skyDescription">clear sky</span>
                 </li>
                 <li>
-                  Humidity: <span id="humidity">74%</span>, Wind:
+                  Humidity: <span id="humidity">74</span>%, Wind:
                   <span id="wind"><span id="windSpeed">5</span>Km/h</span>
                 </li>
               </ul>
@@ -56,8 +58,8 @@
                 class="weathe-icon float-start"
               />
 
-              <span class="temperature">25</span
-              ><span class="unit"
+              <span id="temperature">25</span
+              ><span id="unit"
                 ><a href="#" id="celsius-temp">°C </a>|<a
                   href="#"
                   id="fahrenheit-temp"

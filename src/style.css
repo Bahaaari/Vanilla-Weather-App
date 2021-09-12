@@ -60,7 +60,7 @@ a {
   height: 50px;
 }
 
-.temperature {
+#temperature {
   color: #212121;
   margin-left: 10px;
   font-size: 60px;
@@ -71,10 +71,9 @@ a {
   margin-top: 30px;
 }
 
-.unit {
+#unit {
   color: #212121;
   font-size: 18px;
-
   position: relative;
   line-height: 28px;
   top: -34px;
