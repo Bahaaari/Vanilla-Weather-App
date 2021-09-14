@@ -40,7 +40,7 @@ a {
   color: #878787;
 }
 
-.search-input {
+#search-input {
   background: #f9f7fe;
   border: none;
   padding: 15px 20px;
@@ -60,6 +60,12 @@ a {
   height: 50px;
 }
 
+#search-form {
+  margin-top: 40px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
 #temperature {
   color: #212121;
   margin-left: 10px;
@@ -77,4 +83,22 @@ a {
   position: relative;
   line-height: 28px;
   top: -34px;
+}
+
+.active {
+  color: #212121;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #212121;
+}
+
+#skyDescriptio {
+  display: inline-block;
+}
+
+#skyDescription:first-letter {
+  text-transform: capitalize;
 }
