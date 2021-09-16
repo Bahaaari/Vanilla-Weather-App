@@ -41,10 +41,6 @@ a {
   color: #878787;
 }
 
-.city-profile {
-  margin-bottom: 60px;
-}
-
 #search-input {
   background: #f9f7fe;
   border: none;
@@ -80,6 +76,10 @@ a {
   bottom: -10px;
 }
 
+.city-profile {
+  margin-bottom: 10px;
+}
+
 .icon-temp {
   margin-top: 30px;
 }
@@ -108,4 +108,12 @@ a {
 
 #skyDescription:first-letter {
   text-transform: capitalize;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast {
+  margin-bottom: 60px;
 }
