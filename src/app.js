@@ -16,7 +16,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Sat", "Sun", "Mon", "Tue"];
@@ -39,6 +40,12 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecastAPI(coordinate) {
+  let apiKey = "0d4847b8ed5adf866001a54ef0a28029";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinate.lat}&lon=${coordinate.lon}&appid=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function weatherCondition(response) {
@@ -67,6 +74,8 @@ function weatherCondition(response) {
     "alt",
     `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
   );
+
+  getForecastAPI(response.data.coord);
 }
 
 function searchCity(city) {
@@ -101,7 +110,6 @@ function displayCelsiusTemp(event) {
 let celsiusTemperature = null;
 
 searchCity("Tehran");
-displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
